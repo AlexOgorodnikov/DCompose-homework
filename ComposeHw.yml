@@ -1,6 +1,6 @@
 ---
 version: 3.8
-  services:
+services:
     tomcat: 
       image: docker.io/bitnami/tomcat:latest
       ports:
@@ -10,4 +10,4 @@ version: 3.8
     maven:
       build: .
       volumes_from:
-        - tomcat 
+        - tomcat
