@@ -14,3 +14,4 @@ services:
         - webdata:/usr/local/tomcat/webapps/
 volumes:
   mavendata:
+  webdata:
