@@ -16,3 +16,4 @@ services:
 volumes:
   mavendata:
   webdata:
+  #tested, 106mb tomcat image
