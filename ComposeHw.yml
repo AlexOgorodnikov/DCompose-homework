@@ -11,6 +11,7 @@ services:
       build: .
       volumes:
         - tomcat-share:/usr/local/tomcat/webapps
+        - /home/app:/home/app
 volumes:
   tomcat-share:
   #volume
