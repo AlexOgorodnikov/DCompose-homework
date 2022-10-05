@@ -5,8 +5,9 @@ ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 #update and upp install
-RUN apt-get update
-RUN apt-get install git maven -y
+RUN apt-get -y update && apt-get install -y \
+git \
+maven
 
 #setting directory and packaging
 WORKDIR /home/app
