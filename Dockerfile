@@ -5,7 +5,6 @@ RUN apt-get update
 RUN apt-get install git maven -y
 WORKDIR /home/app
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home/app
-WORKDIR /home/app/boxfuse-sample-java-war-hello
 RUN mvn package
 RUN find /home/app/target -name "*.war" -exec cp -t /usr/local/tomcat/webapps/ {} +
 #changed image, workdir
