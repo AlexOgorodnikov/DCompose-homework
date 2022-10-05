@@ -1,17 +1,19 @@
 ---
 version: '3.8'
 services:
+    maven:
+      build: .
+      volumes:
+        - tomcat-share:/usr/local/tomcat/webapps
+        - target-share:/home/app/target
     tomcat: 
       image: tomcat:9.0.67-jre11
       ports:
         - "8080:8080"
       volumes:
         - tomcat-share:/usr/local/tomcat/webapps
-    maven:
-      build: .
-      volumes:
-        - tomcat-share:/usr/local/tomcat/webapps
-        - /home/app:/home/app
+        - target-share:/home/app/target
+
 volumes:
   tomcat-share:
   #volume
