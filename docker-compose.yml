@@ -10,7 +10,7 @@ services:
       ports:
         - "8080:8080"
       volumes:
-        - webdata:/usr/local/tomcat/webapps/
+        - mavendata:/usr/local/tomcat/webapps/
 volumes:
   mavendata:
   #tested, 106mb tomcat image
