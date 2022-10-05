@@ -5,15 +5,12 @@ services:
       build: .
       volumes:
         - mavendata:/home/app/target/
-        - webdata:/usr/local/tomcat/webapps/
     tomcat: 
       image: tomcat:9.0.8-jre8-alpine
       ports:
         - "8080:8080"
       volumes:
-        - mavendata:/home/app/target/
         - webdata:/usr/local/tomcat/webapps/
 volumes:
   mavendata:
-  webdata:
   #tested, 106mb tomcat image
