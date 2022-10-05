@@ -2,12 +2,14 @@
 version: '3.8'
 services:
     tomcat: 
-      image: docker.io/bitnami/tomcat:latest
+      image: tomcat:9.0.67-jre11
       ports:
         - "8080:8080"
       volumes:
-        - /opt/bitnami/scripts/tomcat
+        - tomcat-share:/usr/local/tomcat
     maven:
       build: .
       volumes_from:
         - tomcat
+volumes:
+  tomcat-share        
