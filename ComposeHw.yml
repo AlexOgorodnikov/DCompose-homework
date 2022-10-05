@@ -6,7 +6,7 @@ services:
       volumes:
         - type:volume
           source:mavendata
-          target:/app/target
+          target:/target
     tomcat: 
       image: tomcat:9.0.67-jre11
       ports:
@@ -14,7 +14,7 @@ services:
       volumes:
         - type:volume
           source:mavendata
-          target:/app/target
+          target:/target
 
 volumes:
   mavendata:
