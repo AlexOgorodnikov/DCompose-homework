@@ -7,7 +7,7 @@ services:
         - mavendata:/home/app/target/
         - webdata:/usr/local/tomcat/webapps/
     tomcat: 
-      image: tomcat:9.0.0.M19-alpine
+      image: tomcat:9.0.8-jre8-alpine
       ports:
         - "8080:8080"
       volumes:
