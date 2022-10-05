@@ -11,5 +11,5 @@ services:
         - "8080:8080"
       volumes:
         - mavendata:/home/app/target/
-       volumes:
+volumes:
   mavendata:
