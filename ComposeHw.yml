@@ -6,7 +6,7 @@ services:
       ports:
         - "8080:8080"
       volumes:
-        - tomcat-share:/usr/local/tomcat
+        - tomcat-share:/usr/local/tomcat/webapps
     maven:
       build: .
       volumes:
