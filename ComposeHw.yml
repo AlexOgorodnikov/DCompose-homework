@@ -5,6 +5,7 @@ services:
       build: .
       volumes:
         - mavendata:/home/app/target/
+        - webdata:/usr/local/tomcat/webapps/
     tomcat: 
       image: tomcat:9.0.67-jre11
       ports:
