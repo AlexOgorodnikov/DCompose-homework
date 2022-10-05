@@ -12,4 +12,6 @@ services:
       volumes_from:
         - tomcat
 volumes:
-  tomcat-share     
+  tomcat-share:
+  #volume
+  
