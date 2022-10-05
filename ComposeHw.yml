@@ -4,17 +4,12 @@ services:
     maven:
       build: .
       volumes:
-        - type:volume
-          source:mavendata
-          target:/target
+        - mavendata:/home/app/target
     tomcat: 
       image: tomcat:9.0.67-jre11
       ports:
         - "8080:8080"
       volumes:
-        - type:volume
-          source:mavendata
-          target:/target
-
+        - mavendata:/home/app/target
 volumes:
   mavendata:
