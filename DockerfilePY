@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 RUN apt-get -y update && apt-get install -y \
 python-all \
-python-pip \
+python3-pip \
 p7zip-full
 WORKDIR /home/pythonapp
 COPY ./webapp.7z /home/pythonapp
