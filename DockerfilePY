@@ -8,4 +8,4 @@ COPY ./webapp.7z /home/pythonapp
 RUN 7z e webapp.7z
 RUN pip install -qr /home/pythonapp/requirements.txt
 EXPOSE 5000
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
