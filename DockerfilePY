@@ -9,4 +9,3 @@ RUN 7z e webapp.7z
 RUN pip install -qr /opt/webapp/requirements.txt
 EXPOSE 5000
 CMD ["python", "app.py"]
-#read instruction befor creating Dockerfile
