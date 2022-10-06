@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+RUN apt-get -y update && apt-get install -y \
+python-all \
+python-pip \
+p7zip-full
+WORKDIR /home/pythonapp
+COPY ./webapp.7z /home/pythonapp
+RUN 7z e webapp.7z
+RUN pip install -qr /home/pythonapp/requirements.txt
+EXPOSE 5000
+CMD ["python", "app.py"]
